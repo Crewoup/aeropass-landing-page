@@ -32,6 +32,19 @@ So the decision is not just nearest versus farthest. It is the best balance betw
     }
 };
 
+/**
+ * GA 紀錄使用者點擊 Follow-up
+ */
+const trackFollowupClick = (question) => {
+    gtag('event', 'followup_click', {
+        'question': question,
+        'page_location': window.location.href,
+        'event_callback': () => {
+            console.log(`Follow-up "${question.substring(0, 30)}..." tracking sent!`);
+        }
+    });
+};
+
 const chatBody = document.getElementById('chat-body-content');
 const chatInputText = document.getElementById('chat-input-text');
 
@@ -251,6 +264,9 @@ async function handleFollowUpClick(item) {
 
     // 0. shows flag
     followUpShowsMap[item.id] = true;
+
+    // gtag
+    trackFollowupClick(item.question);
 
     // 1. AI 提問 (左側)
     const qContainer = createAiMessageContainer();

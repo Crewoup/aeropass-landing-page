@@ -2,7 +2,8 @@
  * Front-end i18n bootstrap.
  * Detects the visitor's browser language, loads the matching language pack,
  * applies it to [data-i18n] elements, then reveals the page (see #i18n-fouc-guard in index.html).
- * No manual language switcher: this is purely browser-language driven.
+ * A `?lang=` query param overrides browser detection. On localhost / the www-dev subdomain, a
+ * manual dev switcher (#i18n-dev-switcher) is revealed that sets `?lang=` and reloads.
  */
 (function () {
     var SUPPORTED_LOCALES = ['en', 'es', 'ja', 'ko', 'zh-hant', 'zh-hans'];
@@ -15,7 +16,45 @@
         'zh-hant': 'zh-Hant-TW',
         'zh-hans': 'zh-Hans-CN'
     };
+    var LOCALE_LABELS = {
+        en: 'English',
+        es: 'Español',
+        ja: '日本語',
+        ko: '한국어',
+        'zh-hant': '繁體中文',
+        'zh-hans': '简体中文'
+    };
     var REVEAL_TIMEOUT_MS = 2000;
+
+    function isDevEnvironment() {
+        var host = window.location.hostname;
+        return host === 'localhost' || host === '127.0.0.1' || host === '::1' || /^www-dev(\.|$)/.test(host);
+    }
+
+    function getLocaleFromQuery() {
+        var lang = new URLSearchParams(window.location.search).get('lang');
+        return SUPPORTED_LOCALES.indexOf(lang) !== -1 ? lang : null;
+    }
+
+    function setupDevSwitcher(currentLocale) {
+        var select = document.getElementById('i18n-dev-switcher');
+        var wrap = document.getElementById('i18n-dev-switcher-wrap');
+        if (!select || !wrap) return;
+
+        SUPPORTED_LOCALES.forEach(function (loc) {
+            var opt = document.createElement('option');
+            opt.value = loc;
+            opt.textContent = LOCALE_LABELS[loc] || loc;
+            if (loc === currentLocale) opt.selected = true;
+            select.appendChild(opt);
+        });
+        wrap.classList.remove('hidden');
+        select.addEventListener('change', function () {
+            var url = new URL(window.location.href);
+            url.searchParams.set('lang', select.value);
+            window.location.href = url.toString();
+        });
+    }
 
     function detectLocale() {
         var browserLangs = (navigator.languages && navigator.languages.length)
@@ -79,6 +118,11 @@
     var settled = false;
     var locale = detectLocale();
 
+    if (isDevEnvironment()) {
+        locale = getLocaleFromQuery() || locale;
+        setupDevSwitcher(locale);
+    }
+    
     window.__i18n = {
         locale: locale,
         dict: null,

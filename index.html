@@ -85,7 +85,10 @@
                     <span class="text-[0.55rem] font-bold text-captain-purple-light tracking-[0.1em] uppercase leading-none" data-i18n="nav.badge">Limited Release</span>
                 </div>
             </a>
-            <div class="flex md:order-2 space-x-4">
+            <div class="flex md:order-2 space-x-4 items-center">
+                <div class="hidden relative" id="i18n-dev-switcher-wrap">
+                    <select id="i18n-dev-switcher" class="appearance-none bg-captain-bg border border-white/10 text-gray-300 text-xs rounded-lg pl-2 pr-6 py-1.5 focus:outline-none focus:ring-1 focus:ring-captain-purple" aria-label="Developer language switcher" title="Dev-only language switcher"></select>
+                </div>
                 <button type="button" id="btn-signin-nav" class="text-gray-300 hover:text-white font-medium text-sm transition-colors hidden" data-i18n="nav.login">Log In</button>
                 <button type="button" id="btn-enter-nav" class="bg-captain-purple hover:bg-violet-600 text-white font-medium rounded-lg text-sm px-5 py-2 text-center transition-all transform hover:scale-105 hidden shadow-[0_0_15px_rgba(124,58,237,0.4)]">
                     <span data-i18n="nav.enter">Enter</span> <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>

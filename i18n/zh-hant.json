@@ -1,0 +1,107 @@
+{
+  "nav": {
+    "tagline": "航空智慧",
+    "badge": "限量開放",
+    "login": "登入",
+    "enter": "進入"
+  },
+  "hero": {
+    "badge": "AI 驅動的航空公司面試準備",
+    "title_line1": "準備好迎接",
+    "title_line2": "下一間航空公司了嗎？",
+    "description": "每一場航空公司面試，最終都會回到同一個問題。<br/>\n<span class=\"text-white font-medium mt-4 mb-4 block\">他們能信任你的判斷力嗎？</span>\nCaptainAI 透過<span class=\"text-white font-medium\">貼近真實的情境題</span>、<span class=\"text-white font-medium\">機長級的回饋</span>，以及<span class=\"text-white font-medium\">航空專業知識</span>，協助職業飛行員準備真實的航空公司面試。",
+    "cta": "加入 CaptainAI Beta",
+    "trust": {
+      "source_verified": "貼近真實的面試情境",
+      "aviation_llm": "機長級的回饋",
+      "context_aware": "航空專業知識"
+    }
+  },
+  "intro": {
+    "heading": "決定飛行員能否被錄取的關鍵",
+    "list": "<li class=\"pl-1\">專業知識能讓你敲開大門。</li>\n<li class=\"pl-1\">判斷力才能讓你拿到聘書。</li>\n<li class=\"pl-1\">航空公司面試考的不只是你懂什麼，更會評估你的思考方式、表達能力、排序優先事項的能力，以及在壓力下做出正確營運判斷的能力。</li>"
+  },
+  "chat": {
+    "status_online": "上線中",
+    "input_placeholder": "輸入你的回答...",
+    "follow_up_prefix": "追問：",
+    "demo": {
+      "question": "CX888，香港（HKG）飛往紐約（JFK），飛行時間 15 小時，採加派機組（4 名飛行員）編組。飛行進入北太平洋上空第 6 小時，正在休息中的替補機長（Relief Captain）回報劇烈急性腹痛與持續暈眩。同時，機艙 EICAS 顯示 FUEL CTR L PUMP 壓力訊息，隨後出現輕微燃油不平衡。MedLink 判斷替補機長可能為闌尾炎，需要臨床觀察。",
+      "user_answer": "我會先穩定飛機，並執行燃油系統的 QRH，確認燃油狀況已受到控制。\n同時，我會讓替補機長暫停執勤，並在 MedLink 的支援下，由客艙組員持續觀察其狀況。\n接著，我會針對剩下的三人機組編組，重新評估兩件事：其一，剩餘航段是否仍有合法且可持續的 FDP；其二，燃油系統異常是否會影響我們的 ETOPS 或目的地餘裕。\n若技術問題與機組狀況都維持穩定，我會選擇繼續飛行；只要其中任何一項開始壓縮安全餘裕，我就會提早轉降至具備醫療支援能力的合適機場。",
+      "followups": {
+        "f1": {
+          "question": "如果燃油異常開始影響 ETOPS 適用性，這會如何改變你是否繼續飛行的判斷？",
+          "answer": "一旦燃油異常開始影響 ETOPS 適用性，我對是否繼續飛行的判斷傾向會立刻改變。\n此時我需要確認飛機是否仍能合法且安全地執行這條航路。如果 ETOPS 餘裕已無法確保，我就不會再深入太平洋。我會與 ATC 及簽派協調，提早轉降至最近且合適的機場。\n關鍵在於，一旦 ETOPS 餘裕變得不確定，我會把它視為觸發決策的條件，而不是可以樂觀以對、慢慢處理的事情。"
+        },
+        "f2": {
+          "question": "在北太平洋上，你會優先選擇哪個轉降機場？為什麼？",
+          "answer": "通常我的第一選擇會是安克拉治（Anchorage），因為它能為可能的闌尾炎提供最完整的醫療支援，也能為燃油系統問題提供最強的工程支援。\n如果時間更為緊迫、且有更近的機場明顯合適，我會選擇較近的選項，例如冷灣（Cold Bay），前提是天氣、跑道與地面支援都在可接受範圍內。\n所以這個決定並不只是「最近」與「最遠」的取捨，而是在醫療急迫性、飛機支援與飛航安全落地之間，取得最佳平衡。"
+        }
+      }
+    }
+  },
+  "features": {
+    "heading": "不只是答對，更要準備好。",
+    "subheading": "CaptainAI 的設計，緊扣航空公司評估職業飛行員的方式。<br/>\n練習貼近真實的面試情境、理解優秀回答背後的邏輯，並鍛鍊面試官需要信任的判斷力。",
+    "items": {
+      "holistic": {
+        "title": "貼近真實的面試情境",
+        "body": "練習依真實航空公司面試設計的技術面、營運面與情境判斷題目。"
+      },
+      "predictive": {
+        "title": "機長級的回饋",
+        "body": "理解一個優秀面試回答背後的優先順序、邏輯思考與專業判斷。"
+      },
+      "native": {
+        "title": "個人化準備方案",
+        "body": "依你的資歷、目標與表現量身打造回饋，讓你專注在最重要的地方。"
+      }
+    }
+  },
+  "final_cta": {
+    "heading": "準備好迎接下一間航空公司了嗎？",
+    "subheading": "機會來臨時，做好準備。"
+  },
+  "contact": {
+    "heading": "建立聯繫",
+    "subheading": "適用於航空公司整合、飛行學校標準化，以及策略性生態夥伴合作。",
+    "label_email": "工作信箱",
+    "label_content": "洽詢內容",
+    "placeholder_content": "請詳細說明你的具體需求，或任何想詢問我們團隊的問題。",
+    "submit": "送出聯繫",
+    "footnote": "如有策略性洽詢，歡迎來信 <a href=\"mailto:service@alnair-studio.com\" class=\"text-captain-purple-light hover:underline\">service@alnair-studio.com</a>"
+  },
+  "footer": {
+    "privacy": "隱私權",
+    "terms": "服務條款",
+    "copyright": "© 2026 Alnair Studio."
+  },
+  "modal": {
+    "title_signin": "登入",
+    "google": "Google",
+    "apple": "Apple",
+    "or_email": "或使用信箱",
+    "label_email": "電子信箱",
+    "label_password": "密碼",
+    "continue": "繼續"
+  },
+  "alerts": {
+    "verification_sent": "驗證信已寄出，請前往收件匣查看！",
+    "login_failed": "登入失敗，電子信箱或密碼有誤",
+    "inquiry_success": "我們已收到你的訊息，將盡快回覆！",
+    "inquiry_failed": "傳送失敗，請稍後再試。",
+    "google_signin_failed": "登入失敗，請稍後再試",
+    "apple_signin_failed": "登入失敗，請稍後再試"
+  },
+  "toast": {
+    "items": [
+      { "text": "一位 B777 機長剛啟動了題庫模式。", "time": "剛剛" },
+      { "text": "一位 A320 副機師正在練習 HR 情境。", "time": "2 分鐘前" },
+      { "text": "一位機師正在準備阿聯酋航空的面試。", "time": "5 分鐘前" },
+      { "text": "一位 B737 機師剛註冊帳號，解鎖 AI 回饋功能。", "time": "1 分鐘前" },
+      { "text": "一位副機師剛完成與 AI 考核機長的模擬面試。", "time": "剛剛" },
+      { "text": "目前有 4 位機師正在 HR 模式中準備。", "time": "即時" },
+      { "text": "過去一小時內，已完成 12 場模擬面試。", "time": "1 小時前" }
+    ]
+  }
+}
